@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SJ Photo | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+html{scroll-behavior:smooth;}
+
+body{
+color:#fff;
+background:url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1920') no-repeat center center/cover;
+background-attachment:fixed;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(8px);
+z-index:-1;
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+background:rgba(0,0,0,0.95);
+z-index:1000;
+}
+
+.logo{
+height:90px;
+cursor:pointer;
+}
+
+nav a{
+color:#fff;
+margin-left:35px;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{color:#ffd700;}
+
+section{padding:140px 8% 80px;}
+
+h2{
+text-align:center;
+font-size:40px;
+color:#ffd700;
+margin-bottom:60px;
+position:relative;
+}
+
+h2::after{
+content:"";
+width:80px;height:3px;
+background:#ffd700;
+display:block;
+margin:15px auto 0;
+}
+
+/* GALLERY GRID */
+.gallery{
+columns:3 300px;
+column-gap:20px;
+}
+
+.gallery img{
+width:100%;
+margin-bottom:20px;
+border-radius:15px;
+cursor:pointer;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+box-shadow:0 0 30px rgba(255,215,0,.4);
+}
+
+/* LIGHTBOX */
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.95);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:2000;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+}
+
+.lightbox span{
+position:absolute;
+top:30px;
+right:40px;
+font-size:40px;
+color:#fff;
+cursor:pointer;
+}
+
+/* FOOTER (GIỮ NGUYÊN STYLE CAO CẤP) */
+.footer{
+background:linear-gradient(to top, #000 60%, rgba(255,215,0,0.05));
+padding:120px 8% 40px;
+border-top:1px solid rgba(255,215,0,.2);
+}
+
+.footer-container{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:80px;
+max-width:1100px;
+margin:auto;
+flex-wrap:wrap;
+}
+
+.footer-left,
+.footer-right{
+flex:1;
+text-align:center;
+}
+
+.footer-logo{
+width:160px;
+margin-bottom:25px;
+filter:drop-shadow(0 0 15px rgba(255,215,0,.6));
+}
+
+.footer-about{
+opacity:.8;
+font-size:15px;
+line-height:1.8;
+max-width:420px;
+margin:auto;
+}
+
+.footer-divider{
+width:2px;
+height:180px;
+background:linear-gradient(to bottom,
+transparent,#ffd700,#fff,#ffd700,transparent);
+}
+
+.footer-right p{
+margin-bottom:18px;
+font-size:15px;
+}
+
+.footer-right i{
+color:#ffd700;
+margin-right:10px;
+}
+
+@media(max-width:900px){
+.gallery{columns:1;}
+.footer-container{flex-direction:column;}
+.footer-divider{display:none;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="https://github.com/sjretouch/sjretouch/blob/main/2.png?raw=true" class="logo" onclick="window.location.href='index.html'">
+
+<nav>
+<a href="index.html#home">Home</a>
+<a href="index.html#services">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="index.html#faq">FAQ</a>
+<a href="index.html#contact">Contact Us</a>
+</nav>
+</header>
+
+<!-- NEWBORN -->
+<section>
+<h2>Newborn</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800">
+<img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800">
+</div>
+</section>
+
+<!-- BASIC -->
+<section>
+<h2>Basic</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800">
+<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=800">
+</div>
+</section>
+
+<!-- PORTRAIT -->
+<section>
+<h2>Portrait</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=800">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800">
+<img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800">
+</div>
+</section>
+
+<!-- MATERNITY -->
+<section>
+<h2>Maternity</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1529336953121-ad5a0d43d0d1?w=800">
+<img src="https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?w=800">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800">
+</div>
+</section>
+
+<!-- MODEL -->
+<section>
+<h2>Model</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800">
+<img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800">
+</div>
+</section>
+
+<!-- HIGH-END -->
+<section>
+<h2>High-End</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800">
+<img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800">
+</div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+<span onclick="closeLightbox()">&times;</span>
+<img id="lightbox-img">
+</div>
+
+<footer class="footer">
+<div class="footer-container">
+
+<div class="footer-left">
+<img src="https://github.com/sjretouch/sjretouch/blob/main/2.png?raw=true" class="footer-logo">
+<p class="footer-about">
+SJ Photo is a high-end professional retouching studio serving photographers worldwide.
+Every image is enhanced with precision and luxury-level detail.
+</p>
+</div>
+
+<div class="footer-divider"></div>
+
+<div class="footer-right">
+<p><i class="fas fa-envelope"></i> sj.retoucher@gmail.com</p>
+<p><i class="fab fa-instagram"></i> @sj.retoucher</p>
+<p><i class="fas fa-clock"></i> We usually reply within 1 hour.</p>
+</div>
+
+</div>
+</footer>
+
+<script>
+const images = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+images.forEach(img=>{
+img.addEventListener("click",()=>{
+lightbox.style.display="flex";
+lightboxImg.src=img.src;
+});
+});
+
+function closeLightbox(){
+lightbox.style.display="none";
+}
+</script>
+
+</body>
+</html>
